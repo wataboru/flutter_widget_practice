@@ -124,42 +124,105 @@ class Palova extends StatelessWidget {
       ),
     );
 
+//    final alarmCard = Card(
+//      child: Column(
+//        children: <Widget>[
+//          ListTile(
+//            title: Text(
+//              'xxxxxx',
+//              style: TextStyle(fontWeight: FontWeight.w500),
+//            ),
+//            subtitle: Text('yyyyyy'),
+//            leading: Icon(
+//              Icons.restaurant,
+//              color: Colors.blue[500],
+//            ),
+//          ),
+//          Divider(),
+//          ListTile(
+//            title: Text(
+//              '03-1234-5678',
+//              style: TextStyle(fontWeight: FontWeight.w500),
+//            ),
+//            leading: Icon(
+//              Icons.contact_phone,
+//              color: Colors.blue[500],
+//            ),
+//          ),
+//          ListTile(
+//            title: Text(
+//              'example@example.com',
+//              style: TextStyle(
+//                fontWeight: FontWeight.w500,
+//              ),
+//            ),
+//            leading: Icon(
+//              Icons.contact_mail,
+//              color: Colors.blue[500],
+//            ),
+//          )
+//        ],
+//      ),
+//    );
+
     final alarmCard = Card(
-      child: Column(
+      color: Colors.red,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          ListTile(
-            title: Text(
-              'xxxxxx',
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            subtitle: Text('yyyyyy'),
-            leading: Icon(
-              Icons.restaurant,
-              color: Colors.blue[500],
-            ),
+          Container(
+            color: Colors.green,
+            child: Container(
+                color: Colors.yellow,
+                padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        color: Colors.green,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text('am'),
+                            Divider(),
+                            Text(
+                              '6:00',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 60,
+                              ),
+                            ),
+                          ],
+                        )),
+                    Text(
+                      '伊豆 ドライブ',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ],
+                )),
           ),
-          Divider(),
-          ListTile(
-            title: Text(
-              '03-1234-5678',
-              style: TextStyle(fontWeight: FontWeight.w500),
-            ),
-            leading: Icon(
-              Icons.contact_phone,
-              color: Colors.blue[500],
-            ),
-          ),
-          ListTile(
-            title: Text(
-              'example@example.com',
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
+          Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Icon(Icons.phone),
+                  Text('でおこして通知'),
+                ],
               ),
-            ),
-            leading: Icon(
-              Icons.contact_mail,
-              color: Colors.blue[500],
-            ),
+              Text('スヌーズOFF'),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Text('日'),
+                  Text('月'),
+                  Text('火'),
+                  Text('水'),
+                  Text('木'),
+                  Text('金'),
+                  Text('土'),
+                ],
+              )
+            ],
           )
         ],
       ),
